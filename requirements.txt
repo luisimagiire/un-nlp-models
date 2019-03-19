@@ -1,0 +1,11 @@
+numpy
+pandas
+keras
+tensorflow
+dask[complete]
+psutil
+PyYAML
+sklearn
+gensim
+cython
+ujson

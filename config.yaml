@@ -1,0 +1,39 @@
+
+
+GENERAL:
+  raw_dataset_path: datasets/baseline/test/test.csv
+  dataset_path: datasets/test_00
+  tags_label_path: datasets/test_00/tags_encoder.pckl
+  cats_label_path: datasets/test_00/category_encoder.pckl
+  tokenizer_path: datasets/test_00/tokenizer.pckl
+
+TRAINING:
+  epochs: 4
+  epochs_size: 10000
+  validation_size: 1000
+  batch_size: 500
+  num_workers: 1
+  validation_split: 0.2
+  output_path: models/dev
+  log_path: logs/models
+
+  # NLP variables ----------
+  sequence_lenght: 50
+  embbeding_size: 300
+  embbeding_trainable: False
+
+  # Keras Callbacks
+  TENSORBOARD: {
+    tensorboard_path: logs/tensorboard
+  }
+  EarlyStopping: {
+    monitor: val_loss,
+    min_delta: 0,
+    patience: 2,
+    verbose: 0,
+    mode: auto
+  }
+  CheckPoint: {
+    verbose: 1,
+    save_best_only: True
+  }
