@@ -26,7 +26,6 @@ def main(model, config):
         model = BaseTagCatKerasExt(config)
     elif model == "BaseTagCatKerasW2V":
         model = BaseTagCatKerasW2V(config)
-        pass
     elif model == "BaseTagCatKerasFT":
         model = BaseTagCatKerasFT(config)
     elif model == "TagKerasW2V":
